@@ -4,7 +4,7 @@
  
  Set the size of your desired canvas by adjusting the constants on lines 7 and 8.
  */
-let preferredWidth = 600
+let preferredWidth = 400
 let preferredHeight = 600
 /*:
  ## Required code
@@ -40,13 +40,6 @@ PlaygroundPage.current.liveView = canvas
  
  */
 
-// Move the origin from the bottom-left corner of the canvas to it's centre point
-canvas.translate(to: Point(x: canvas.width / 2,
-                           y: canvas.height / 2))
-
-// Show a grid
-canvas.drawAxes(withScale: true, by: 20, color: .black)
-
 /*:
  ## Add your code
  
@@ -58,21 +51,101 @@ canvas.drawAxes(withScale: true, by: 20, color: .black)
 
 // Begin writing your code below (you can remove the examples shown)
 
-// Draw a circle, using the canvas object directly
-canvas.drawEllipse(at: Point(x: 100, y: 100), width: 25, height: 25)
+//draw a rectangular
+let currentColour = Color(hue: 193, saturation: 99, brightness: 86, alpha: 100)
 
-// Draw a vertical line, up and to the left
-p.drawTo(dx: -25, dy: 50)
+canvas.fillColor = currentColour
+canvas.borderColor = .white
+canvas.drawRectangle(at: Point(x: 200, y: 300), width: 400, height: 600, anchoredBy: .centre)
 
-// Go back to origin
-p.goToOrigin()
+//draw a white circle
+canvas.drawShapesWithFill = true
+canvas.fillColor = .white
+canvas.borderColor = .black
 
-// Change the pen color
-p.penColor = .red
+canvas.fillColor = currentColour
+canvas.borderColor = .black
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 375, height: 375)
 
-// Draw a curve, down and to the right
-p.addArc(radius: 50, angle: -45)
+canvas.fillColor = .white
+canvas.borderColor = .black
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 350, height: 350)
 
+canvas.fillColor = currentColour
+canvas.borderColor = .black
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 325, height: 325)
+
+canvas.fillColor = .white
+canvas.borderColor = .black
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 300, height: 300)
+
+canvas.fillColor = currentColour
+canvas.borderColor = .black
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 275, height: 275)
+
+canvas.fillColor = .white
+canvas.borderColor = .black
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 250, height: 250)
+
+canvas.fillColor = currentColour
+canvas.borderColor = .black
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 225, height: 225)
+
+canvas.fillColor = .white
+canvas.borderColor = .black
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 200, height: 200)
+
+canvas.fillColor = currentColour
+canvas.borderColor = .black
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 175, height: 175)
+
+canvas.fillColor = .white
+canvas.borderColor = .black
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 150, height: 150)
+
+canvas.fillColor = currentColour
+canvas.borderColor = .black
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 125, height: 125)
+
+canvas.fillColor = .white
+canvas.borderColor = .black
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 100, height:
+100)
+
+canvas.fillColor = currentColour
+canvas.borderColor = .black
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 75, height: 75)
+
+canvas.fillColor = .white
+canvas.borderColor = .black
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 50, height: 50)
+
+canvas.fillColor = currentColour
+canvas.borderColor = .black
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 35, height: 35)
+
+canvas.fillColor = .white
+canvas.borderColor = .black
+canvas.drawEllipse(at: Point(x: 200, y: 400), width: 15, height: 15)
+
+//draw a circle
+let pink = Color(hue: 312, saturation: 63, brightness: 66, alpha: 100)
+canvas.drawShapesWithFill = false
+canvas.drawShapesWithBorders = true
+canvas.defaultBorderWidth = 15
+canvas.borderColor = pink
+
+for size in stride(from: 0, through: 400, by: 50) {
+    size
+    canvas.drawEllipse(at: Point(x: 200, y: 500), width: size, height: size)
+
+}
+
+
+
+
+// Move the origin from the bottom-left corner of the canvas to it's centre point
+canvas.drawAxes(withScale: true, by: 50, color: .blue)
 /*:
  ## Show the Live View
  Don't see any results?

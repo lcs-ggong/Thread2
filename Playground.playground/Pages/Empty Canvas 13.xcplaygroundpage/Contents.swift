@@ -395,11 +395,10 @@ canvas.drawCustomShape(with: iigureVertices123456)
 
 
 //Draw the axes
-canvas.drawAxes(withScale: true, by: 25, color: .white)
+//canvas.drawAxes(withScale: true, by: 25, color: .black)
 
-//Iterate over the y x values that we need to draw the diagonal lines
-canvas.fillColor = lightgrey
-canvas.borderColor = lightgrey
+//Iterate over the x values that we need to draw the diagonal lines
+
 for x in stride(from: 275, through: 400, by: 25){
     
     //see the x values for reference

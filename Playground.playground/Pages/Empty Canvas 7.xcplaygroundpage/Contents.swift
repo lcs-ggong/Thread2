@@ -1,10 +1,10 @@
 //: [Previous](@previous) / [Next](@next)
 /*:
-## Canvas size
+ ## Canvas size
  
  Set the size of your desired canvas by adjusting the constants on lines 7 and 8.
  */
-let preferredWidth = 600
+let preferredWidth = 400
 let preferredHeight = 600
 /*:
  ## Required code
@@ -40,39 +40,85 @@ PlaygroundPage.current.liveView = canvas
  
  */
 
-// Move the origin from the bottom-left corner of the canvas to it's centre point
-canvas.translate(to: Point(x: canvas.width / 2,
-                           y: canvas.height / 2))
 
-// Show a grid
-canvas.drawAxes(withScale: true, by: 20, color: .black)
 
 /*:
  ## Add your code
  
  Beginning on line 61, you can add your own code.
-  
+ 
  [Documentation](http://russellgordon.ca/CanvasGraphics/Documentation/) is available.
-
+ 
  */
 
 // Begin writing your code below (you can remove the examples shown)
 
-// Draw a circle, using the canvas object directly
-canvas.drawEllipse(at: Point(x: 100, y: 100), width: 25, height: 25)
 
-// Draw a vertical line, up and to the left
-p.drawTo(dx: -25, dy: 50)
+//draw a rectangular
+let currentColour = Color(hue: 107, saturation: 63, brightness: 73, alpha: 100)
 
-// Go back to origin
-p.goToOrigin()
+canvas.fillColor = currentColour
+canvas.borderColor = .white
+canvas.drawRectangle(at: Point(x: 200, y: 300), width: 400, height: 600, anchoredBy: .centre)
 
-// Change the pen color
-p.penColor = .red
+//draw a square
 
-// Draw a curve, down and to the right
-p.addArc(radius: 50, angle: -45)
+canvas.fillColor = . black
+canvas.borderColor = .black
+canvas.drawRectangle(at: Point(x: 200, y: 200), width: 400, height: 400, anchoredBy: .centre)
 
+//for verticalPosition in stride(from: -25, through: 400, by: 50){
+//
+//    for horizontalPosition in stride(from: -25, through: 400, by: 50){
+//
+//        canvas.fillColor = currentColour
+//        canvas.borderColor = .white
+//        canvas.drawEllipse(at: Point(x: horizontalPosition + 25, y: verticalPosition + 25), width: 50, height: 50)
+//
+//
+//    }
+//}
+
+//draw a circle
+let offwhite = Color(hue: 87, saturation: 5, brightness: 88, alpha: 100)
+
+canvas.highPerformance = true
+
+for horizontalPosition in stride(from: 0, through: 400, by: 40) {
+    for verticalPosition in stride(from: 0, through: 400, by: 40) {
+        
+        //Conditionally change the fill colour
+        if horizontalPosition + verticalPosition <= 400
+            && horizontalPosition > 0
+            && verticalPosition > 0 {
+            canvas.fillColor = offwhite
+        } else {
+            canvas.fillColor = currentColour
+        }
+        
+        // Draw the circle
+        
+        canvas.drawEllipse(at: Point(x: horizontalPosition,
+                                     y: verticalPosition),
+                           width: 36, height: 36)
+        
+        // Where is this circle?
+        canvas.drawText(message: "(\(horizontalPosition), \n\(verticalPosition))",
+                        at: Point(x: horizontalPosition, y: verticalPosition - 10),
+                        size: 8)
+        
+        
+        
+    }
+}
+
+canvas.highPerformance = false
+
+// Draw the title
+canvas.drawText(message: "pixies", at: Point(x: 40, y: 425), size: 90, kerning: 2.0)
+
+// Move the origin from the bottom-left corner of the canvas to it's centre point
+canvas.drawAxes(withScale: true, by: 50, color: .blue)
 /*:
  ## Show the Live View
  Don't see any results?
@@ -80,7 +126,7 @@ p.addArc(radius: 50, angle: -45)
  Remember to show the Live View (1 then 2):
  
  ![timeline](timeline.png "Timeline")
-
+ 
  ## Use source control
  To keep your work organized, receive feedback, and earn a high grade in this course, regular use of source control is a must.
  
