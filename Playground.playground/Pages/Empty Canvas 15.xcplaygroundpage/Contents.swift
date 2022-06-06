@@ -21,7 +21,7 @@ import CanvasGraphics
 let canvas = Canvas(width: preferredWidth, height: preferredHeight)
 
 // Create a turtle that can draw upon the canvas
-let turtle = Tortoise(drawingUpon: canvas)
+let t = Tortoise(drawingUpon: canvas)
 
 // Create a pen that can draw upon the canvas
 let p = Pen(drawingUpon: canvas)
@@ -41,50 +41,114 @@ PlaygroundPage.current.liveView = canvas
  */
 
 // Move the origin from the bottom-left corner of the canvas to it's centre point
-canvas.translate(to: Point(x: canvas.width / 2,
-                           y: canvas.height / 2))
-
+canvas.translate(to: Point(x: 100, y: 100))
+ 
 // Show a grid
 canvas.drawAxes(withScale: true, by: 20, color: .black)
 
-/*:
- ## Add your code
- 
- Beginning on line 61, you can add your own code.
-  
- [Documentation](http://russellgordon.ca/CanvasGraphics/Documentation/) is available.
+// constants
 
- */
+let scale = 20
+let diagonal = Int(sqrt(2.0)*Double(scale))
+                   
+t.penUp()
+t.left(by: 90)
+t.forward(steps: 1*scale)
+t.right(by: 90)
+t.penDown()
+t.forward(steps: 3*scale)
+t.right(by: 90)
+t.forward(steps: 1*scale)
+t.left(by: 135)
+t.forward(steps:2*diagonal)
+t.right(by: 270)
+t.forward(steps:2*diagonal)
+t.left(by: 135)
+t.forward(steps: 1*scale)
+t.right(by: 90)
+t.forward(steps: 3*scale)
 
-// Begin writing your code below (you can remove the examples shown)
+t.penUp()
+t.right(by: 90)
+t.forward(steps: 2*scale)
+t.right(by: 90)
+t.penDown()
+t.forward(steps: 3*scale)
+t.right(by: 90)
+t.forward(steps: 1*scale)
+t.left(by: 135)
+t.forward(steps:2*diagonal)
+t.right(by: 270)
+t.forward(steps:2*diagonal)
+t.left(by: 135)
+t.forward(steps: 1*scale)
+t.right(by: 90)
+t.forward(steps: 3*scale)
 
-// Draw a circle, using the canvas object directly
-canvas.drawEllipse(at: Point(x: 100, y: 100), width: 25, height: 25)
+t.penUp()
+t.right(by: 90)
+t.forward(steps: 2*scale)
+t.right(by: 90)
+t.penDown()
+t.forward(steps: 3*scale)
+t.right(by: 90)
+t.forward(steps: 1*scale)
+t.left(by: 135)
+t.forward(steps:2*diagonal)
+t.right(by: 270)
+t.forward(steps:2*diagonal)
+t.left(by: 135)
+t.forward(steps: 1*scale)
+t.right(by: 90)
+t.forward(steps: 3*scale)
 
-// Draw a vertical line, up and to the left
-p.drawTo(dx: -25, dy: 50)
+t.penUp()
+t.right(by: 90)
+t.forward(steps: 2*scale)
+t.right(by: 90)
+t.penDown()
+t.forward(steps: 3*scale)
+t.right(by: 90)
+t.forward(steps: 1*scale)
+t.left(by: 135)
+t.forward(steps:2*diagonal)
+t.right(by: 270)
+t.forward(steps:2*diagonal)
+t.left(by: 135)
+t.forward(steps: 1*scale)
+t.right(by: 90)
+t.forward(steps: 3*scale)
 
-// Go back to origin
-p.goToOrigin()
+t.penUp()
+t.right(by: 90)
+t.forward(steps: 2*scale)
+t.right(by: 90)
+t.penDown()
+t.forward(steps: 3*scale)
+t.right(by: 90)
+t.forward(steps: 1*scale)
+t.left(by: 135)
+t.forward(steps:2*diagonal)
+t.right(by: 270)
+t.forward(steps:2*diagonal)
+t.left(by: 135)
+t.forward(steps: 1*scale)
+t.right(by: 90)
+t.forward(steps: 3*scale)
 
-// Change the pen color
-p.penColor = .red
-
-// Draw a curve, down and to the right
-p.addArc(radius: 50, angle: -45)
-
-/*:
- ## Show the Live View
- Don't see any results?
- 
- Remember to show the Live View (1 then 2):
- 
- ![timeline](timeline.png "Timeline")
-
- ## Use source control
- To keep your work organized, receive feedback, and earn a high grade in this course, regular use of source control is a must.
- 
- Please commit and push your work often.
- 
- ![source_control](source-control.png "Source Control")
- */
+t.penUp()
+t.right(by: 90)
+t.forward(steps: 2*scale)
+t.right(by: 90)
+t.penDown()
+t.forward(steps: 3*scale)
+t.right(by: 90)
+t.forward(steps: 1*scale)
+t.left(by: 135)
+t.forward(steps:2*diagonal)
+t.right(by: 270)
+t.forward(steps:2*diagonal)
+t.left(by: 135)
+t.forward(steps: 1*scale)
+t.right(by: 90)
+t.forward(steps: 3*scale)
