@@ -89,34 +89,12 @@ t.penDown()
 // draw an arrow
 drawArrow()
 
-// get into position to draw second arrow
-getIntoPositionForNextArrow()
+// repeat five times
+for _ in 1...5 {
+    // get into position to draw second arrow
+    getIntoPositionForNextArrow()
 
-// draw second arrow
-drawArrow()
-
-// get into position to draw third arrow
-getIntoPositionForNextArrow()
-
-// draw third arrow
-drawArrow()
-
-// get into position to draw forth arrow
-getIntoPositionForNextArrow()
-// draw fourth arrow
-drawArrow()
-
-// get into position to draw fifth arrow
-getIntoPositionForNextArrow()
-
-// draw fifth arrow
-drawArrow()
-
-
-// get into position to draw sixth arrow
-getIntoPositionForNextArrow()
-
-// draw sixth arrow
-drawArrow()
-
+    // draw second arrow
+    drawArrow()
+}
 
