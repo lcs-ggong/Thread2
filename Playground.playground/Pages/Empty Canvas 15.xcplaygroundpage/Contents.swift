@@ -68,6 +68,14 @@ func drawArrow() {
     t.forward(steps: 3*scale)
 }
 
+func getIntoPositionForNextArrow() {
+    t.penUp()
+    t.right(by: 90)
+    t.forward(steps: 2*scale)
+    t.right(by: 90)
+    t.penDown()
+}
+
 // get into position to draw first arrow
 t.penUp()
 t.left(by: 90)
@@ -79,52 +87,33 @@ t.penDown()
 drawArrow()
 
 // get into position to draw second arrow
-t.penUp()
-t.right(by: 90)
-t.forward(steps: 2*scale)
-t.right(by: 90)
-t.penDown()
+getIntoPositionForNextArrow()
 
 // draw second arrow
 drawArrow()
 
 // get into position to draw third arrow
-t.penUp()
-t.right(by: 90)
-t.forward(steps: 2*scale)
-t.right(by: 90)
-t.penDown()
+getIntoPositionForNextArrow()
 
 // draw third arrow
 drawArrow()
 
 // get into position to draw forth arrow
-t.penUp()
-t.right(by: 90)
-t.forward(steps: 2*scale)
-t.right(by: 90)
-t.penDown()
-
+getIntoPositionForNextArrow()
 // draw fourth arrow
 drawArrow()
 
 // get into position to draw fifth arrow
-t.penUp()
-t.right(by: 90)
-t.forward(steps: 2*scale)
-t.right(by: 90)
-t.penDown()
+getIntoPositionForNextArrow()
 
 // draw fifth arrow
 drawArrow()
 
 
 // get into position to draw sixth arrow
-t.penUp()
-t.right(by: 90)
-t.forward(steps: 2*scale)
-t.right(by: 90)
-t.penDown()
+getIntoPositionForNextArrow()
 
 // draw sixth arrow
 drawArrow()
+
+
