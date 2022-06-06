@@ -46,11 +46,28 @@ canvas.translate(to: Point(x: 100, y: 100))
 // Show a grid
 canvas.drawAxes(withScale: true, by: 20, color: .black)
 
+
 // constants
 
 let scale = 20
 let diagonal = Int(sqrt(2.0)*Double(scale))
-                   
+              
+
+// functions
+func drawArrow() {
+    t.forward(steps: 3*scale)
+    t.right(by: 90)
+    t.forward(steps: 1*scale)
+    t.left(by: 135)
+    t.forward(steps:2*diagonal)
+    t.right(by: 270)
+    t.forward(steps:2*diagonal)
+    t.left(by: 135)
+    t.forward(steps: 1*scale)
+    t.right(by: 90)
+    t.forward(steps: 3*scale)
+}
+
 // get into position to draw first arrow
 t.penUp()
 t.left(by: 90)
@@ -59,17 +76,7 @@ t.right(by: 90)
 t.penDown()
 
 // draw an arrow
-t.forward(steps: 3*scale)
-t.right(by: 90)
-t.forward(steps: 1*scale)
-t.left(by: 135)
-t.forward(steps:2*diagonal)
-t.right(by: 270)
-t.forward(steps:2*diagonal)
-t.left(by: 135)
-t.forward(steps: 1*scale)
-t.right(by: 90)
-t.forward(steps: 3*scale)
+drawArrow()
 
 // get into position to draw second arrow
 t.penUp()
@@ -79,17 +86,7 @@ t.right(by: 90)
 t.penDown()
 
 // draw second arrow
-t.forward(steps: 3*scale)
-t.right(by: 90)
-t.forward(steps: 1*scale)
-t.left(by: 135)
-t.forward(steps:2*diagonal)
-t.right(by: 270)
-t.forward(steps:2*diagonal)
-t.left(by: 135)
-t.forward(steps: 1*scale)
-t.right(by: 90)
-t.forward(steps: 3*scale)
+drawArrow()
 
 // get into position to draw third arrow
 t.penUp()
@@ -99,17 +96,7 @@ t.right(by: 90)
 t.penDown()
 
 // draw third arrow
-t.forward(steps: 3*scale)
-t.right(by: 90)
-t.forward(steps: 1*scale)
-t.left(by: 135)
-t.forward(steps:2*diagonal)
-t.right(by: 270)
-t.forward(steps:2*diagonal)
-t.left(by: 135)
-t.forward(steps: 1*scale)
-t.right(by: 90)
-t.forward(steps: 3*scale)
+drawArrow()
 
 // get into position to draw forth arrow
 t.penUp()
@@ -119,17 +106,7 @@ t.right(by: 90)
 t.penDown()
 
 // draw fourth arrow
-t.forward(steps: 3*scale)
-t.right(by: 90)
-t.forward(steps: 1*scale)
-t.left(by: 135)
-t.forward(steps:2*diagonal)
-t.right(by: 270)
-t.forward(steps:2*diagonal)
-t.left(by: 135)
-t.forward(steps: 1*scale)
-t.right(by: 90)
-t.forward(steps: 3*scale)
+drawArrow()
 
 // get into position to draw fifth arrow
 t.penUp()
@@ -139,17 +116,7 @@ t.right(by: 90)
 t.penDown()
 
 // draw fifth arrow
-t.forward(steps: 3*scale)
-t.right(by: 90)
-t.forward(steps: 1*scale)
-t.left(by: 135)
-t.forward(steps:2*diagonal)
-t.right(by: 270)
-t.forward(steps:2*diagonal)
-t.left(by: 135)
-t.forward(steps: 1*scale)
-t.right(by: 90)
-t.forward(steps: 3*scale)
+drawArrow()
 
 
 // get into position to draw sixth arrow
@@ -160,14 +127,4 @@ t.right(by: 90)
 t.penDown()
 
 // draw sixth arrow
-t.forward(steps: 3*scale)
-t.right(by: 90)
-t.forward(steps: 1*scale)
-t.left(by: 135)
-t.forward(steps:2*diagonal)
-t.right(by: 270)
-t.forward(steps:2*diagonal)
-t.left(by: 135)
-t.forward(steps: 1*scale)
-t.right(by: 90)
-t.forward(steps: 3*scale)
+drawArrow()
