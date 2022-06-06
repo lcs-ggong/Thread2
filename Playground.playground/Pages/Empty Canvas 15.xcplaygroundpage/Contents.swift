@@ -66,12 +66,15 @@ func drawArrow() {
     t.forward(steps: 1*scale)
     t.right(by: 90)
     t.forward(steps: 3*scale)
+    t.left(by: 90)
+    t.forward(steps: 2*scale)
+    t.left(by: 90)
 }
 
 func getIntoPositionForNextArrow() {
     t.penUp()
-    t.right(by: 90)
-    t.forward(steps: 2*scale)
+    t.left(by: 90)
+    t.forward(steps: 4*scale)
     t.right(by: 90)
     t.penDown()
 }
