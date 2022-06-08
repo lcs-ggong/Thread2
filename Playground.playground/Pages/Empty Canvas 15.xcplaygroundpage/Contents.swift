@@ -98,3 +98,60 @@ for _ in 1...5 {
     drawArrow()
 }
 
+
+// get into position to draw
+t.penUp()
+t.forward(steps: 5*scale)
+t.right(by: 90)
+t.forward(steps: 20*scale)
+
+t.penDown()
+t.left(by: 90)
+drawArrow()
+
+// repeat five times
+for _ in 1...5 {
+    // get into position to draw second arrow
+    getIntoPositionForNextArrow()
+
+    // draw second arrow
+    drawArrow()
+}
+
+// get into position to draw
+t.penUp()
+t.forward(steps: 5*scale)
+t.right(by: 90)
+t.forward(steps: 20*scale)
+
+t.penDown()
+t.left(by: 90)
+drawArrow()
+
+// repeat five times
+for _ in 1...5 {
+    // get into position to draw second arrow
+    getIntoPositionForNextArrow()
+
+    // draw second arrow
+    drawArrow()
+}
+
+// get into position to draw
+t.penUp()
+t.forward(steps: 5*scale)
+t.right(by: 90)
+t.forward(steps: 20*scale)
+
+t.penDown()
+t.left(by: 90)
+drawArrow()
+
+// repeat five times
+for _ in 1...5 {
+    // get into position to draw second arrow
+    getIntoPositionForNextArrow()
+
+    // draw second arrow
+    drawArrow()
+}
